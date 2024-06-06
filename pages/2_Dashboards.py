@@ -323,14 +323,14 @@ df = df.loc[linhas_selecionadas, :]
 #Titulo 
 
 st.title('📊 Dashboards')
-st.divider()
+st.markdown("""---""")
 
 #Create tabs
 tab1, tab2, tab3, tab4= st.tabs(['🌍 Países','🏙️ Cidades','🍽️ Restaurantes','🥗 Culinárias'])
 
 with tab1:
     st.title( 'Visão Países 🌍')
-    st.divider()
+    st.markdown("""---""")
 
     with st.container():
         col1, col2 = st.columns(2, gap='large')
@@ -347,7 +347,7 @@ with tab1:
             fig = top_pais_cidades (df)
             st.plotly_chart(fig, use_container_width=True)
 
-    st.divider()
+    st.markdown("""---""")
     with st.container():
         col1, col2 = st.columns(2 , gap='large')
 
@@ -363,7 +363,7 @@ with tab1:
             fig = top_pais_culinarias (df)
             st.plotly_chart(fig, use_container_width=True)
 
-    st.divider()
+    st.markdown("""---""")
     with st.container():
         # Bar plot - Top Pais com melhor Avaliacao 
         st.markdown (f' #### Top {top_n} Países com a melhor nota média de Avaliação')
@@ -374,14 +374,14 @@ with tab2:
 
     with st.container():
         st.title( ' Visão Cidades 🏙️')
-        st.divider()     
+        st.markdown("""---""")    
  
         # Bar Plot - Quantidades de restaurante por cidades
         st.markdown(f' #### Top {top_n} Cidades com mais Restaurantes')
         fig = qtd_rest_cidade (df)
         st.plotly_chart(fig)
 
-    st.divider()
+    st.markdown("""---""")
     with st.container():
 
         col1,col2 = st.columns(2, gap='large')
@@ -400,7 +400,7 @@ with tab2:
 
 with tab3: 
     st.title( ' Visão Restaurantes 🍽️')
-    st.divider()
+    st.markdown("""---""")
 
     with st.container():
         # Bar plot - Top restaurantes com as melhores avaliações 
@@ -408,14 +408,14 @@ with tab3:
         fig = top_rest_avaliacao (df)
         st.plotly_chart(fig, use_container_width=True)
 
-    st.divider()
+    st.markdown("""---""")
     with st.container():
         # Bar plot - Top Restaurantes com melhores pratos
         st.markdown(f' ### Top {top_n} - Restaurantes com o maior valor de prato para 2 pessoas')
         fig = top_rest_prato (df)
         st.plotly_chart(fig, use_container_width=True)
 
-    st.divider()
+    st.markdown("""---""")
     with st.container():
 
         col1, col2 = st.columns(2, gap='large')
@@ -434,7 +434,7 @@ with tab3:
 
 with tab4:
     st.title('Visão Culinárias 🥗')
-    st.divider()
+    st.markdown("""---""")
 
     with st.container():
         st.markdown( ' #### Melhores Restaurantes por tipo de Culinária')
@@ -476,14 +476,14 @@ with tab4:
             media = df_aux.iloc[0,1]
             col4.metric(culin , media)
 
-    st.divider()
+    st.markdown("""---""")
     with st.container():
         # Dataframe com top culinarias por notas 
         st.markdown(f' ### Top {top_n} - Culinárias com melhores avaliações na média.') 
         fig = top_culin_notas (df)
         st.dataframe(fig , use_container_width=True)
 
-    st.divider()
+    st.markdown("""---""")
     with st.container():
         # Dataframe com Restaurantes que faz pedido online e entrega
         st.markdown(f' ### Top {top_n} - Culinárias com Restaurantes que aceitam pedidos online e fazem entregas.')
