@@ -17,16 +17,16 @@ st.sidebar.markdown("""---""")
 st.sidebar.markdown('#### Desenvolvido por Samuel Lima')
 
 st.title(' Zomato Dashboards.')
-st.divider()
+st.markdown("""---""")
 
 st.markdown ( '### Seja bem vindo ao Dashboard Interativo da Zomato')
 st.markdown( ' O objetivo da criação deste Dashboard é para fornecer as métricas de acompanhamento e crescimento solicitadas pelo CEO, afim de que possa tomar as melhores decisões estratégicas para a Empresa.')
-st.divider()
+st.markdown("""---""")
 
 st.markdown ( '### Sobre a Zomato')
 st.markdown( ' A Zomato é um serviço de busca de restaurantes para quem quer sair para jantar, buscar comida ou pedir em casa e esta localizada em mais de 10 Países e mais de 100 cidades cadastradas em sua plataforma.')
 
-st.divider()
+st.markdown("""---""")
 st.markdown ( '### Como utilizar o Zomato Dashboards:')
 st.markdown( ' Este Dashboard possui, além desta aqui, 3 abas. Que se refere a:')
 
