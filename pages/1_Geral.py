@@ -171,7 +171,7 @@ st.sidebar.download_button(
     mime="text/csv",
 )
 
-st.sidebar.divider()
+st.sidebar.markdown("""---""")
 #assinatura
 st.sidebar.markdown('#### Desenvolvido por Samuel Lima') 
 
@@ -208,7 +208,7 @@ with st.container():
         tipos_culin = len(df['unique_cuisines'].unique())
         col5.metric('Tipos de Culinárias',tipos_culin)
 
-st.divider()
+st.markdown("""---""")
 st.markdown ('### Encontre nossos parceiros pelo mundo 🌏')
 # Aplicando o mapa no layout 
 
