@@ -17,7 +17,7 @@ st.sidebar.markdown("""---""")
 st.sidebar.markdown('#### Desenvolvido por Samuel Lima')
 
 st.title(' Zomato Dashboards.')
-st.markdown("""---""")
+st.divider()
 
 st.markdown ( '### Seja bem vindo ao Dashboard Interativo da Zomato')
 st.markdown( ' O objetivo da criação deste Dashboard é para fornecer as métricas de acompanhamento e crescimento solicitadas pelo CEO, afim de que possa tomar as melhores decisões estratégicas para a Empresa.')
