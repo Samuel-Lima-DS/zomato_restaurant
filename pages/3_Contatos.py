@@ -25,7 +25,7 @@ st.sidebar.markdown('#### Desenvolvido por Samuel Lima')
 #LAYOUT STREAMLIT
 
 st.title('📍 Onde você pode me encontrar:')
-st.markdown("""---""")
+st.divider()
 st.markdown( ' ### - Portfólio: ')
 st.markdown( '#### https://samuel-lima-ds.github.io/portfolio_projetos/')
 st.markdown( ' ### - Email: ')
