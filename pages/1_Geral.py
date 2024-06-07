@@ -122,7 +122,7 @@ df['restaurant_id'] = df['restaurant_id'].drop_duplicates()
 
 
 st.title('Visão Geral')
-st.markdown("""---""")
+st.divider()
 
 #imagem
 image_path ='zomato_logo.png'
@@ -132,7 +132,7 @@ st.sidebar.image(image , width = 120)
 #titulo sidebar
 st.sidebar.markdown('# Zomato - Food Delivery')
 st.sidebar.markdown('## The Best Restaurant for You')
-st.sidebar.markdown("""---""")
+st.sidebar.divider()
 
 #Filtros
 st.sidebar.markdown (' ## Filtros')
@@ -146,7 +146,7 @@ country_options = st.sidebar.multiselect('Selecione os Países:',
        'Indonesia', 'New Zeland', 'England', 'Qatar', 'South Africa',
        'Sri Lanka', 'Turkey'])
 
-st.sidebar.markdown("""---""")
+st.sidebar.divider()
 
 
 #Interacao no FILTRO
@@ -171,7 +171,7 @@ st.sidebar.download_button(
     mime="text/csv",
 )
 
-st.sidebar.markdown("""---""")
+st.sidebar.divider()
 #assinatura
 st.sidebar.markdown('#### Desenvolvido por Samuel Lima') 
 
@@ -208,7 +208,7 @@ with st.container():
         tipos_culin = len(df['unique_cuisines'].unique())
         col5.metric('Tipos de Culinárias',tipos_culin)
 
-st.markdown("""---""")
+st.divider()
 st.markdown ('### Encontre nossos parceiros pelo mundo 🌏')
 # Aplicando o mapa no layout 
 
