@@ -43,7 +43,7 @@ def top_culin_notas (df):
 def perc_rest_reserva (df):
     colunas = ['restaurant_id','has_table_booking']
     df_aux = df.loc[:,colunas].groupby('has_table_booking').count().reset_index()
-    labels = ['Não faz Reserva' ,'Faz Reserva']
+    labels = ['Faz Reserva' ,'Não faz Reserva']
     fig = px.pie( df_aux, values='restaurant_id', names=labels, color_discrete_sequence=['red'], labels=labels)
     return fig 
 
@@ -51,7 +51,7 @@ def perc_rest_reserva (df):
 def perc_rest_entregas (df):
     colunas = ['restaurant_id','has_online_delivery']
     df_aux = df.loc[:,colunas].groupby('has_online_delivery').count().reset_index()
-    fig = px.pie( df_aux, values='restaurant_id', names=['Não Entregam' ,'Entregam'], color_discrete_sequence=['red'])
+    fig = px.pie( df_aux, values='restaurant_id', names=['Entregam' ,'Não Entregam'], color_discrete_sequence=['red'])
     return fig
 
 # Top Restaurantes com melhores pratos - Tab3 Restaurantes
